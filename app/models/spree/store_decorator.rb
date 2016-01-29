@@ -18,7 +18,7 @@ Spree::Store.class_eval do
     :path => 'stores/:id/:style/:basename.:extension',
     :convert_options => { :all => '-strip -auto-orient' }
 
-  # validates_attachment_file_name :logo, :matches => [/png\Z/i, /jpe?g\Z/i]
+  validates_attachment_file_name :logo, :matches => [/png\Z/i, /jpe?g\Z/i]
 
   def self.current(domain = nil)
     if !domain.nil?
